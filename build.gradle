@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.1'
+    id 'io.spring.dependency-management' version '1.1.5'
+    id 'com.moowork.node' version '1.3.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+node {
+    version = '22.2.0' // Версия Node.js, которая у вас установлена
+    npmVersion = '10.8.1' // Версия npm, если требуется
+    download = true // Автоматическая загрузка Node.js, если он не установлен
+    nodeModulesDir = file("${project.projectDir}/node_modules") // Путь к каталогу node_modules
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

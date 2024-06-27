@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <title>Calculator</title>
+</head>
+<body>
+<div class="calculator-wrap">
+    <table class="calculator-table">
+        <tr>
+            <td colspan="4">
+                <div class="window-control">
+                    <button class="circle-button red-button"></button>
+                    <button class="circle-button yellow-button"></button>
+                    <button class="circle-button green-button"></button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="display-row"><input type="text" id="main-display" value="0" readonly></td>
+        </tr>
+        <tr>
+            <td><button type="button" class="dark-button">AC</button></td>
+            <td><button type="button" class="dark-button"><sup>+</sup>/<sub>-</sub></button></td>
+            <td><button type="button" class="dark-button">%</button></td>
+            <td><button type="button" class="orange-button">÷</button></td>
+        </tr>
+        <tr>
+            <td><button type="button">7</button></td>
+            <td><button type="button">8</button></td>
+            <td><button type="button">9</button></td>
+            <td><button type="button" class="orange-button">×</button></td>
+        </tr>
+        <tr>
+            <td><button type="button">4</button></td>
+            <td><button type="button">5</button></td>
+            <td><button type="button">6</button></td>
+            <td><button type="button" class="orange-button">-</button></td>
+        </tr>
+        <tr>
+            <td><button type="button">1</button></td>
+            <td><button type="button">2</button></td>
+            <td><button type="button">3</button></td>
+            <td><button type="button" class="orange-button">+</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button">0</button></td>
+            <td><button type="button">,</button></td>
+            <td><button type="button" class="orange-button">=</button></td>
+        </tr>
+    </table>
+
+    <script src="../static/js/calculator.js"></script>
+</div>
+</body>
+</html>
